@@ -57,7 +57,7 @@
             canDefineProperty = true;
         } catch (x) {}
         var hotApplyOnUpdate = true;
-        var hotCurrentHash = "aa17d7575143e37ae738";
+        var hotCurrentHash = "8e28a976f2cfc08506f7";
         var hotCurrentModuleData = {};
         var hotCurrentParents = [];
         function hotCreateRequire(moduleId) {
@@ -457,28 +457,37 @@
         };
         return hotCreateRequire(0)(0);
     }([ function(module, exports) {
-        "use strict";
-        var MyModule = function() {
-            function MyModule(name) {
-                if (name === void 0) {
-                    name = "Hello World";
+        System.register([], function(exports_1, context_1) {
+            "use strict";
+            var __moduleName = context_1 && context_1.id;
+            var MyModule;
+            return {
+                setters: [],
+                execute: function() {
+                    MyModule = function() {
+                        function MyModule(name) {
+                            if (name === void 0) {
+                                name = "Hello World";
+                            }
+                            this.setName("My Module : " + name);
+                        }
+                        MyModule.prototype.setName = function(name) {
+                            this.name = name;
+                            return this;
+                        };
+                        MyModule.prototype.getName = function() {
+                            return this.name;
+                        };
+                        MyModule.prototype.print = function() {
+                            console.log(this.getName());
+                            return this;
+                        };
+                        return MyModule;
+                    }();
+                    exports_1("MyModule", MyModule);
                 }
-                this.setName("My Module : " + name);
-            }
-            MyModule.prototype.setName = function(name) {
-                this.name = name;
-                return this;
             };
-            MyModule.prototype.getName = function() {
-                return this.name;
-            };
-            MyModule.prototype.print = function() {
-                console.log(this.getName());
-                return this;
-            };
-            return MyModule;
-        }();
-        exports.MyModule = MyModule;
+        });
     } ]);
 });
 
