@@ -57,7 +57,7 @@
             canDefineProperty = true;
         } catch (x) {}
         var hotApplyOnUpdate = true;
-        var hotCurrentHash = "8e28a976f2cfc08506f7";
+        var hotCurrentHash = "f7677e0153e1dc925aed";
         var hotCurrentModuleData = {};
         var hotCurrentParents = [];
         function hotCreateRequire(moduleId) {
@@ -465,11 +465,8 @@
                 setters: [],
                 execute: function() {
                     MyModule = function() {
-                        function MyModule(name) {
-                            if (name === void 0) {
-                                name = "Hello World";
-                            }
-                            this.setName("My Module : " + name);
+                        function MyModule() {
+                            this.setName("My Module : Hello world");
                         }
                         MyModule.prototype.setName = function(name) {
                             this.name = name;

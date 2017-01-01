@@ -18,7 +18,7 @@ export as namespace MyModule;
  */
 declare namespace MyModule {
     export class MyModule {
-        constructor(name?: string);
+        constructor();
         setName(name: string):any;
         getName():string;
         print():any;

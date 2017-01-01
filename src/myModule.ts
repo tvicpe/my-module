@@ -4,8 +4,8 @@
  */
 export class MyModule {
     private name: string;
-    constructor(name: string = 'Hello World') {
-        this.setName('My Module : ' + name);
+    constructor() {
+        this.setName('My Module : Hello world');
     }
 
     public setName(name: string) {
